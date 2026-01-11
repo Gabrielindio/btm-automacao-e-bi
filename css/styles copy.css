@@ -1,0 +1,541 @@
+/* =========================================
+   1. VARIÁVEIS E RESET (A Base do Design)
+   ========================================= */
+:root {
+    /* Paleta BTM Automações & BI */
+    --color-primary: #004B23;   /* Verde Esmeralda (Corporativo) */
+    --color-secondary: #2F3E46; /* Cinza Chumbo (Texto/Detalhes) */
+    --color-accent: #52B788;    /* Verde Claro (Destaques/Botões) */
+    --color-light: #E9ECEF;     /* Cinza Gelo (Fundos Gerais) */
+    --color-ice-green: #F2F9F4; /* Verde Gelo (Fundo Hero e Cases) */
+    --color-white: #ffffff;
+    --color-text: #333333;
+    
+    /* Fontes */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   2. BOTÕES (O Estilo BTM)
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.btn-dark {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    padding: 10px 25px;
+}
+
+.btn-dark:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-light {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* =========================================
+   3. HEADER (Cabeçalho Estilo Devnology)
+   ========================================= */
+.header {
+    background-color: var(--color-white);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-menu a {
+    color: #1a1a1a;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: var(--color-primary);
+}
+
+.nav-menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.flag-icon {
+    width: 24px;
+    border-radius: 2px;
+}
+
+.arrow-icon {
+    font-size: 0.8rem;
+    transform: rotate(180deg);
+}
+
+/* =========================================
+   4. HERO SECTION (Fundo Verde Gelo)
+   ========================================= */
+.hero {
+    background-color: var(--color-ice-green);
+    color: var(--color-secondary);
+    padding: 140px 0 100px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* =========================================
+   5. SERVIÇOS (Estilo Clean - Sem Emojis)
+   ========================================= */
+.services {
+    padding: 100px 0;
+    background-color: var(--color-white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 75, 35, 0.1);
+}
+
+.card-icon {
+    margin-bottom: 25px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-icon img {
+    max-height: 100%;
+    max-width: 90px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.card-topics {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-topics li {
+    background-color: #F1F3F5;
+    color: var(--color-secondary);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center; /* Centralizado como etiqueta */
+    transition: 0.3s;
+}
+
+.card-topics li:hover {
+    background-color: #E2E6EA;
+}
+
+/* =========================================
+   6. CASOS DE SUCESSO (ESTILO)
+   ========================================= */
+.cases {
+    padding: 100px 0;
+    background-color: var(--color-ice-green);
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.case-card {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--color-primary);
+    transition: 0.3s;
+}
+
+.case-card:hover {
+    transform: translateY(-8px);
+}
+
+.case-tag {
+    display: inline-block;
+    background-color: #E8F5E9;
+    color: var(--color-primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.case-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.case-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.case-result {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border-left: 3px solid var(--color-accent);
+}
+
+.case-result strong {
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* =========================================
+   7. SOBRE & PÚBLICO
+   ========================================= */
+.about {
+    padding: 80px 0;
+    background-color: var(--color-light);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.about-stats {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.stat-item {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-accent);
+}
+/* =========================================
+   8. CTA FINAL (Ajustado para ser mais compacto)
+   ========================================= */
+.cta-footer {
+    background-color: var(--color-ice-green);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 60px 0; /* Diminuído de 100px para 60px */
+    border-top: 1px solid rgba(0, 75, 35, 0.05);
+}
+
+.cta-footer h2 {
+    color: var(--color-primary);
+    font-size: 2.2rem; /* Levemente menor */
+    margin-bottom: 15px;
+}
+
+.cta-footer p {
+    margin-bottom: 30px; /* Reduzido de 40px */
+    font-size: 1.05rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
+}
+
+/* =========================================
+   9. RODAPÉ (Versão Faixa Pequena)
+   ========================================= */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 15px 0; /* Padding mínimo para virar uma faixa estreita */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;       /* Coloca os itens em linha */
+    justify-content: space-between; /* Espalha os itens pelas pontas */
+    align-items: center;       /* Centraliza verticalmente */
+    gap: 20px;
+}
+
+.footer-location {
+    font-weight: 500;
+    font-size: 0.85rem;
+    min-width: fit-content;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: var(--color-white);
+    font-size: 0.85rem;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--color-accent);
+    opacity: 1;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    margin-top: 0;             /* Remove a margem superior */
+    padding-top: 0;            /* Remove o padding superior */
+    border-top: none;          /* Remove a linha divisória para ficar mais "clean" */
+    white-space: nowrap;
+}
+
+/* No celular, ela volta a ser uma pilha, mas bem apertada */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+/* =========================================
+   10. RESPONSIVIDADE FINAL
+   ========================================= */
+@media (max-width: 992px) {
+    .hero-title { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .header-container { flex-direction: column; gap: 15px; }
+    .nav-menu ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .hero-title { font-size: 2rem; }
+    .hero-buttons { flex-direction: column; }
+    .about-container { flex-direction: column; }
+    .lang-selector { display: none; }
+    
+    /* Ajustes do novo footer para celular */
+    .cta-footer { padding: 70px 0; }
+    .cta-footer h2 { font-size: 2rem; }
+    footer { padding: 40px 0; }
+    .footer-social { gap: 20px; }
+}
+/* =========================================
+   BOTÃO DO CARD (Alinhado ao Centro)
+   ========================================= */
+.case-link {
+    display: inline-block;
+    margin-top: 20px;
+    align-self: center;         /* ADICIONADO: Força o botão para o centro do card */
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 30px;         /* Ajustado para um formato mais equilibrado */
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 75, 35, 0.1);
+}
+
+.case-link:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 75, 35, 0.2);
+}
