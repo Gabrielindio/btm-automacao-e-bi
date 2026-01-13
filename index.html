@@ -5,26 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTM Automações & BI | Inteligência de Dados em Betim</title>
     
-    <link rel="stylesheet" href="css/styles.css">
-    
+    <link rel="icon" type="image/png" href="assets/img/favicon.png"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-</head>
-
-<head>
-    <meta charset="UTF-8">
-    <title>BTM Automações & BI</title>
-    
-    <link rel="icon" type="image/png" href="assets/img/favicons.png">
-    
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-<header class="header">
+    <header class="header">
         <div class="container header-container">
             <div class="logo">
-                <img src="assets/img/logo-btm.png" alt="BTM Automações & BI Logo" class="logo-img">
+                <a href="index.html">
+                    <img src="assets/img/logo-btm.png" alt="BTM Automações & BI Logo" class="logo-img">
+                </a>
             </div>
             
             <nav class="nav-menu">
@@ -47,6 +40,12 @@
                     <span class="arrow-icon">^</span>
                 </div>
             </div>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
 
@@ -66,14 +65,14 @@
             </div>
         </section>
 
-<section id="servicos" class="services">
+        <section id="servicos" class="services">
             <div class="container">
                 <div class="section-header">
                     <h2>Nossas Soluções</h2>
                     <p>Tecnologia de ponta para resolver dores operacionais reais.</p>
                 </div>
 
-<div class="cards-grid">
+                <div class="cards-grid">
                     <div class="card">
                         <div class="card-icon">
                             <img src="assets/img/icon-bi.png" alt="Ícone BI">
@@ -87,6 +86,7 @@
                             <li>Tomada de Decisão</li>
                             <li>Identificação de Gargalos</li>
                         </ul>
+                        <a href="o_que_e_bi.html" class="case-link">Saiba Mais →</a>
                     </div>
 
                     <div class="card">
@@ -102,6 +102,7 @@
                             <li>Redução de Custos</li>
                             <li>Documentação de Processos</li>
                         </ul>
+                        <a href="o_que_e_rpa.html" class="case-link">Saiba Mais →</a>
                     </div>
 
                     <div class="card">
@@ -117,62 +118,65 @@
                             <li>Modelos de Governança</li>
                             <li>Qualidade da Informação</li>
                         </ul>
+                        <a href="o_que_e_eng_dados.html" class="case-link">Saiba Mais →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-<section id="cases" class="cases">
-    <div class="container">
-        <div class="section-header">
-            <h2>Casos de Sucesso</h2>
-            <p>Veja como aplicamos nossa inteligência em dados para gerar resultados reais.</p>
-        </div>
-
-        <div class="cases-grid">
-            
-            <div class="case-card">
-                <div class="case-tag">BI & Inteligência</div>
-                <h3>Dashboard 360º: Produção Just-in-Time</h3>
-                <p class="case-description">
-                    Implementação de monitoramento em tempo real para uma indústria de para-choques em Betim. 
-                    O sistema integra sensores da linha de produção com o cronograma de entrega, eliminando o caos de planilhas manuais.
-                </p>
-                <div class="case-result">
-                    <strong>Resultado:</strong> Visibilidade total do fluxo produtivo e eliminação de multas por atraso JIT.
-                </div>
-                
-                <a href="bi_inteligencia.html" class="case-link">Ver detalhes do projeto →</a>
-            </div>
-
-            <div class="case-card">
-                <div class="case-tag">RPA & Automação</div>
-                <h3>Automação de Documentos Fiscais</h3>
-                <p class="case-description">
-                    Desenvolvemos um robô que realiza a leitura automática de e-mails, baixa Notas Fiscais e faz o lançamento direto no ERP, garantindo eficiência sem burocracia.
-                </p>
-                <div class="case-result">
-                    <strong>Resultado:</strong> Economia de 20 horas semanais de trabalho braçal e erro zero.
+        <section id="cases" class="cases">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Casos de Sucesso</h2>
+                    <p>Veja como aplicamos nossa inteligência em dados para gerar resultados reais.</p>
                 </div>
 
-                <a href="rpa_automacao.html" class="case-link">Ver detalhes do projeto →</a>
-            </div>
+                <div class="cases-grid">
+                    
+                    <div class="case-card">
+                        <div class="case-tag">BI & Inteligência</div>
+                        <h3>Dashboard 360º: Produção Just-in-Time</h3>
+                        <p class="case-description">
+                            Implementação de monitoramento em tempo real para uma indústria de para-choques em Betim. 
+                            O sistema integra sensores da linha de produção com o cronograma de entrega, eliminando o caos de planilhas manuais.
+                        </p>
+                        <div class="case-result">
+                            <strong>Resultado:</strong> Visibilidade total do fluxo produtivo e eliminação de multas por atraso JIT.
+                        </div>
+                        
+                        <a href="bi_inteligencia.html" class="case-link">Ver detalhes do projeto →</a>
+                    </div>
 
-            <div class="case-card">
-                <div class="case-tag">Engenharia de Dados</div>
-                <h3>Pipeline de Dados para E-commerce</h3>
-                <p class="case-description">
-                    Construímos uma estrutura automatizada que conecta os dados da loja virtual com o estoque físico em **Betim**, permitindo sistemas autônomos e inteligentes.
-                </p>
-                <div class="case-result">
-                    <strong>Resultado:</strong> Redução de 40% no tempo de processamento de pedidos e dados sempre íntegros.
-                </div>
-                
-                <a href="eng_dado.html" class="case-link">Ver detalhes do projeto →</a>
-            </div>
+                    <div class="case-card">
+                        <div class="case-tag">RPA & Automação</div>
+                        <h3>Automação de Documentos Fiscais</h3>
+                        <p class="case-description">
+                            Desenvolvemos um robô que realiza a leitura automática de e-mails, baixa Notas Fiscais e faz o lançamento direto no ERP, garantindo eficiência sem burocracia.
+                        </p>
+                        <div class="case-result">
+                            <strong>Resultado:</strong> Economia de 20 horas semanais de trabalho braçal e erro zero.
+                        </div>
 
-        </div> </div>
-</section>
+                        <a href="rpa_automacao.html" class="case-link">Ver detalhes do projeto →</a>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-tag">Engenharia de Dados</div>
+                        <h3>ETL: A Preparação Essencial</h3>
+                        <p class="case-description">
+                            A empresa tinha muitos dados, mas não conseguia usá-los (Ciência de Dados) porque estavam "sujos". 
+                            Implementamos o processo de <strong>ETL (Extração, Transformação e Carga)</strong> para limpar e organizar tudo em um Banco de Dados Centralizado.
+                        </p>
+                        <div class="case-result">
+                            <strong>Resultado:</strong> Dados estruturados e prontos para gerar valor, saindo do caos de múltiplas fontes para uma fonte única de verdade.
+                        </div>
+                        
+                        <a href="eng_dado.html" class="case-link">Ver detalhes do projeto →</a>
+                    </div>
+
+                </div> 
+            </div>
+        </section>
 
         <section id="sobre" class="about">
             <div class="container about-container">
@@ -199,13 +203,15 @@
             </div>
         </section>
 
-<section class="cta-footer">
-        <div class="container">
-            <h2>Pronto para automatizar sua empresa?</h2>
-            <p>Vamos conversar sobre como eliminar suas planilhas manuais hoje mesmo e focar no crescimento estratégico do seu negócio.</p>
-            <a href="https://wa.me/seunumerodowhatsapp" class="btn btn-primary" target="_blank">Chamar no WhatsApp</a>
-        </div>
-    </section>
+        <section class="cta-footer">
+            <div class="container">
+                <h2>Pronto para automatizar sua empresa?</h2>
+                <p>Vamos conversar sobre como eliminar suas planilhas manuais hoje mesmo e focar no crescimento estratégico do seu negócio.</p>
+                <a href="https://wa.me/seunumerodowhatsapp" class="btn btn-primary" target="_blank">Chamar no WhatsApp</a>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <div class="container">
@@ -215,7 +221,7 @@
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/company/btm-automacoes-bi" target="_blank">LinkedIn</a>
                     <a href="https://www.instagram.com/seuinstagram" target="_blank">Instagram</a>
-                    </div>
+                </div>
                 
                 <p class="footer-copyright">
                     &copy; 2026 BTM Automações & BI. Todos os direitos reservados.
@@ -224,8 +230,7 @@
         </div>
     </footer>
 
-    <script>
-        feather.replace();
-    </script>
+    <script src="js/scripts.js"></script>
+
 </body>
 </html>
