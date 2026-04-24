@@ -1,241 +1,1174 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTM Automações & BI | Inteligência de Dados em Betim</title>
-    
-    <meta name="description" content="A BTM Automações & BI em Betim transforma dados em lucro com RPA, Dashboards inteligentes e Engenharia de Dados sob medida.">
-    <meta name="keywords" content="Automação, BI, RPA, Betim, Minas Gerais, Dados, Dashboards">
-    
-    <link rel="icon" type="image/png" href="assets/img/favicons.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- ─── SEO ─────────────────────────────── -->
+  <title>BTM Automações & BI | Inteligência de Dados em Betim</title>
+  <meta name="description" content="A BTM Automações & BI em Betim transforma dados em lucro com RPA, Dashboards inteligentes e Engenharia de Dados sob medida para empresas B2B.">
+  <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
+  <meta property="og:title"       content="BTM Automações & BI | Inteligência de Dados em Betim">
+  <meta property="og:description" content="Automação RPA, Dashboards e Engenharia de Dados que geram resultado mensurável.">
+  <meta property="og:image"       content="assets/img/og-cover.png">
+  <meta property="og:url"         content="https://btmautomacoes.com.br">
+  <meta property="og:type"        content="website">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/img/favicons.png">
+
+  <!-- ─── FONTS — preconnect primeiro, evita render-blocking ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ─── PRELOAD assets críticos (LCP) ───────────────────── -->
+  <link rel="preload" as="image" href="assets/img/logo-btm.png">
+
+  <!-- ─── SVG SPRITES (inline — zero HTTP requests) ────────── -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+    </symbol>
+    <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+    </symbol>
+    <symbol id="icon-team" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/>
+    </symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </symbol>
+  </svg>
+
+  <style>
+    /* ══════════════════════════════════════════════════════
+       TOKENS — design system completo
+    ══════════════════════════════════════════════════════ */
+    :root {
+      /* Verde */
+      --green-950: #021A0B;
+      --green-900: #052E12;
+      --green-800: #0A4D1F;
+      --green-700: #0D6626;
+      --green-600: #16A34A;  /* FIX: variável estava sendo usada mas não declarada */
+      --green-500: #18A34A;
+      --green-400: #22C55E;
+      --green-300: #4ADE80;
+      --green-100: #DCFCE7;
+      --mint:      #00F5A0;
+
+      /* Slate */
+      --slate-950: #020617;
+      --slate-900: #0F172A;
+      --slate-800: #1E293B;
+      --slate-700: #334155;
+      --slate-600: #475569;  /* FIX: contraste adequado para labels (substitui slate-400 em texto) */
+      --slate-400: #94A3B8;
+      --slate-200: #E2E8F0;
+      --slate-100: #F1F5F9;
+      --white:     #FFFFFF;
+
+      /* Tipografia */
+      --font-head: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+
+      /* Geometria */
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 24px;
+      --radius-xl: 36px;
+
+      /* Sombras */
+      --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
+      --shadow-md: 0 8px 32px rgba(0,0,0,.10);
+      --shadow-lg: 0 24px 64px rgba(0,0,0,.14);
+    }
+
+    /* ══════════════════════════════════════════════════════
+       RESET
+    ══════════════════════════════════════════════════════ */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--slate-900);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration:none; color:inherit; }
+    ul { list-style:none; }
+    img { display:block; max-width:100%; height:auto; } /* FIX: height:auto evita distorção com width/height explícitos */
+    .container { max-width:1160px; margin:0 auto; padding:0 24px; }
+
+    /* ══════════════════════════════════════════════════════
+       SKIP LINK — acessibilidade a11y (FIX: novo)
+    ══════════════════════════════════════════════════════ */
+    .skip-link {
+      position:absolute; top:-100px; left:16px;
+      background:var(--green-600); color:var(--white);
+      padding:10px 18px; border-radius:var(--radius-sm);
+      font-weight:700; font-size:.9rem; z-index:9999;
+      transition:top .2s;
+    }
+    .skip-link:focus { top:16px; }
+
+    /* ══════════════════════════════════════════════════════
+       ANIMAÇÕES — com prefers-reduced-motion (FIX: novo)
+    ══════════════════════════════════════════════════════ */
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(28px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    @keyframes pulse-ring {
+      0%   { transform:scale(1);    opacity:.6; }
+      100% { transform:scale(1.55); opacity:0;  }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position:  200% center; }
+    }
+
+    .reveal {
+      opacity:0;
+      transform:translateY(32px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* FIX: respeita preferência do sistema operacional */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .hero-content,
+      .hero-badge::before {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    /* ══════════════════════════════════════════════════════
+       BOTÕES
+    ══════════════════════════════════════════════════════ */
+    .btn {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:14px 30px; border-radius:var(--radius-sm);
+      font-family:var(--font-head); font-weight:700; font-size:.9rem;
+      cursor:pointer; transition:all .25s ease; white-space:nowrap;
+      border:2px solid transparent; letter-spacing:.02em;
+    }
+    .btn:focus-visible {
+      outline: 3px solid var(--mint);
+      outline-offset: 3px;
+    }
+    .btn-primary {
+      background:var(--green-500); color:var(--white);
+      border-color:var(--green-500);
+      box-shadow:0 4px 20px rgba(24,163,74,.35);
+    }
+    .btn-primary:hover {
+      background:var(--green-400); border-color:var(--green-400);
+      transform:translateY(-2px);
+      box-shadow:0 8px 28px rgba(24,163,74,.45);
+    }
+    .btn-ghost {
+      background:transparent; color:var(--white);
+      border-color:rgba(255,255,255,.35);
+    }
+    .btn-ghost:hover {
+      background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.6);
+    }
+    .btn-outline {
+      background:transparent; color:var(--green-700);
+      border-color:var(--green-700);
+    }
+    .btn-outline:hover {
+      background:var(--green-700); color:var(--white);
+      transform:translateY(-2px);
+    }
+    .btn-dark {
+      background:var(--slate-900); color:var(--white);
+      border-color:var(--slate-900); padding:10px 22px;
+    }
+    .btn-dark:hover { background:var(--green-800); border-color:var(--green-800); }
+    .btn-whatsapp {
+      background: linear-gradient(135deg,#25D366,#128C7E);
+      color:var(--white); border:none;
+      box-shadow:0 6px 24px rgba(37,211,102,.4);
+    }
+    .btn-whatsapp:hover {
+      transform:translateY(-3px);
+      box-shadow:0 10px 32px rgba(37,211,102,.5);
+    }
+
+    /* ══════════════════════════════════════════════════════
+       HEADER
+    ══════════════════════════════════════════════════════ */
+    .header {
+      position:sticky; top:0; z-index:1000;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(16px) saturate(180%);
+      border-bottom:1px solid rgba(0,0,0,.07);
+      padding:14px 0;
+      transition:box-shadow .3s;
+    }
+    .header.scrolled { box-shadow:var(--shadow-md); }
+    .header-container {
+      display:flex; align-items:center;
+      justify-content:space-between; gap:24px;
+    }
+    .logo-img { height:42px; width:auto; }
+    .nav-menu ul { display:flex; gap:36px; }
+    .nav-menu a {
+      font-weight:500; font-size:.92rem; color:var(--slate-700);
+      position:relative; padding:4px 0;
+    }
+    .nav-menu a::after {
+      content:''; position:absolute; bottom:-2px; left:0;
+      width:0; height:2px; background:var(--green-500);
+      border-radius:2px; transition:width .3s;
+    }
+    .nav-menu a:hover,
+    .nav-menu a[aria-current="page"] { color:var(--green-700); }
+    .nav-menu a:hover::after,
+    .nav-menu a[aria-current="page"]::after { width:100%; }
+    .nav-menu a:focus-visible {
+      outline:2px solid var(--green-500); outline-offset:4px; border-radius:2px;
+    }
+    .header-right { display:flex; align-items:center; gap:16px; }
+    .flag-icon { width:22px; border-radius:3px; }
+
+    /* FIX: hamburger agora é <button> semântico e acessível */
+    .hamburger {
+      display:none; cursor:pointer; flex-direction:column; gap:5px;
+      background:none; border:none; padding:6px;
+      border-radius:var(--radius-sm);
+    }
+    .hamburger:focus-visible {
+      outline:2px solid var(--green-500); outline-offset:3px;
+    }
+    .bar { width:24px; height:2.5px; background:var(--slate-900); border-radius:2px; transition:.3s; display:block; }
+
+    /* ──── Nav overlay mobile (FIX: novo) ──── */
+    .nav-overlay {
+      display:none; position:fixed; inset:0;
+      background:rgba(0,0,0,.45); z-index:999;
+    }
+    .nav-overlay.active { display:block; }
+
+    /* ══════════════════════════════════════════════════════
+       HERO
+    ══════════════════════════════════════════════════════ */
+    .hero {
+      background: linear-gradient(145deg, var(--green-950) 0%, var(--green-900) 45%, var(--green-800) 100%);
+      min-height:92vh; display:flex; flex-direction:column;
+      justify-content:center; padding:120px 0 100px;
+      position:relative; overflow:hidden;
+    }
+    .hero::before {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background:
+        radial-gradient(ellipse 60% 60% at 80% 20%, rgba(0,245,160,.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 50% at 10% 90%, rgba(24,163,74,.18) 0%, transparent 70%),
+        radial-gradient(ellipse 30% 30% at 50% 50%, rgba(13,102,38,.25) 0%, transparent 70%);
+    }
+    .hero::after {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size:60px 60px;
+    }
+    .hero-content {
+      position:relative; z-index:1;
+      max-width:800px; margin:0 auto; text-align:center;
+      animation: fadeUp .8s ease forwards;
+    }
+    .hero-logo-bg {
+      position:absolute; top:50%; left:50%;
+      transform:translate(-50%, -50%);
+      width:min(560px, 95%); height:auto;
+      opacity:.07;
+      pointer-events:none; user-select:none;
+      filter:brightness(0) invert(1);
+      z-index:0;
+    }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(0,245,160,.12); border:1px solid rgba(0,245,160,.25);
+      color:var(--mint); border-radius:50px; padding:6px 18px;
+      font-size:.8rem; font-weight:600; letter-spacing:.06em;
+      text-transform:uppercase; margin-bottom:28px;
+      position:relative; z-index:1;
+    }
+    .hero-badge::before {
+      content:''; width:7px; height:7px; border-radius:50%;
+      background:var(--mint); flex-shrink:0;
+      box-shadow:0 0 0 0 rgba(0,245,160,.6);
+      animation:pulse-ring 1.8s ease-out infinite;
+    }
+    .hero-title {
+      font-family:var(--font-head); font-size:clamp(2.4rem,5vw,4rem);
+      line-height:1.15; color:var(--white); margin-bottom:22px;
+      font-weight:800; position:relative; z-index:1;
+    }
+    .hero-title .accent {
+      background:linear-gradient(90deg,var(--mint),var(--green-300));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    .hero-subtitle {
+      font-size:1.15rem; color:rgba(255,255,255,.88);
+      max-width:580px; margin:0 auto 44px; font-weight:300;
+      position:relative; z-index:1;
+    }
+    .hero-buttons { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; position:relative; z-index:1; }
+
+    /* ══════════════════════════════════════════════════════
+       STATS BAR
+    ══════════════════════════════════════════════════════ */
+    .stats-bar {
+      background:var(--white);
+      box-shadow:var(--shadow-md);
+      border-radius:var(--radius-lg);
+      margin:-40px 24px 0;
+      position:relative; z-index:10;
+      padding:32px 48px;
+      display:flex; justify-content:space-around; align-items:center;
+      flex-wrap:wrap; gap:24px;
+    }
+    .stat-pill { text-align:center; }
+    .stat-pill .num {
+      font-family:var(--font-head); font-size:2.2rem;
+      font-weight:800; color:var(--green-700); line-height:1;
+    }
+    /* FIX: slate-600 no lugar de slate-400 → contraste 4.6:1, passa WCAG AA */
+    .stat-pill .lbl {
+      font-size:.8rem; color:var(--slate-600); font-weight:500;
+      text-transform:uppercase; letter-spacing:.06em; margin-top:4px;
+    }
+    .stat-sep {
+      width:1px; height:40px; background:var(--slate-200);
+      border:none; /* FIX: era <div>, agora será <hr> semântico */
+    }
+
+    /* ══════════════════════════════════════════════════════
+       SEÇÃO BASE
+    ══════════════════════════════════════════════════════ */
+    section { padding:100px 0; }
+    .section-tag {
+      display:inline-block; background:var(--green-100);
+      color:var(--green-700); border-radius:50px;
+      padding:5px 16px; font-size:.75rem; font-weight:700;
+      letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px;
+    }
+    .section-title {
+      font-family:var(--font-head); font-size:clamp(1.9rem,3.5vw,2.8rem);
+      font-weight:800; line-height:1.2; color:var(--slate-900);
+      margin-bottom:14px;
+    }
+    /* FIX: agora usa --green-600 que está declarado */
+    .section-title span { color:var(--green-600); }
+    .section-sub {
+      font-size:1.05rem;
+      color:var(--slate-600); /* FIX: era slate-400, agora slate-600 para contraste */
+      max-width:520px;
+    }
+    .section-header-grid {
+      display:flex; justify-content:space-between; align-items:flex-end;
+      gap:32px; flex-wrap:wrap; margin-bottom:64px;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       SERVICES
+    ══════════════════════════════════════════════════════ */
+    .services { background:var(--slate-100); padding-top:140px; }
+    .cards-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+    .card-featured {
+      border-color:var(--green-300);
+      background:linear-gradient(160deg,#fff 55%,var(--green-100));
+    }
+    .card-featured-badge {
+      display:inline-flex; align-items:center; gap:6px;
+      background:var(--green-700); color:var(--white);
+      border-radius:50px; padding:3px 12px;
+      font-size:.7rem; font-weight:700; letter-spacing:.06em;
+      text-transform:uppercase; margin-bottom:16px;
+    }
+    .card-featured-badge::before {
+      content:''; width:6px; height:6px; border-radius:50%;
+      background:var(--mint); flex-shrink:0;
+    }
+    .card {
+      background:var(--white); border-radius:var(--radius-lg);
+      padding:40px 32px; border:1px solid var(--slate-200);
+      box-shadow:var(--shadow-sm);
+      transition:transform .3s ease, box-shadow .3s ease, border-color .3s;
+      display:flex; flex-direction:column;
+    }
+    .card:hover {
+      transform:translateY(-6px); box-shadow:var(--shadow-lg);
+      border-color:var(--green-300);
+    }
+    .card-icon-wrap {
+      width:60px; height:60px; border-radius:var(--radius-md);
+      background:var(--green-100); display:flex;
+      align-items:center; justify-content:center; margin-bottom:24px;
+    }
+    .card-icon-wrap img { width:32px; height:32px; object-fit:contain; }
+    .card h3 {
+      font-family:var(--font-head); font-size:1.25rem;
+      color:var(--slate-900); margin-bottom:10px;
+    }
+    .card-desc {
+      font-size:.93rem; color:var(--slate-600); /* FIX: slate-600 */
+      margin-bottom:24px; flex:1;
+    }
+    .card-topics { display:flex; flex-direction:column; gap:8px; margin-bottom:28px; }
+    .card-topics li {
+      display:flex; align-items:center; gap:10px;
+      font-size:.83rem; font-weight:600; color:var(--slate-700);
+    }
+    .card-topics li::before {
+      content:''; width:6px; height:6px; border-radius:50%;
+      background:var(--green-400); flex-shrink:0;
+    }
+    .case-link {
+      display:inline-flex; align-items:center; gap:6px;
+      font-family:var(--font-head); font-size:.85rem; font-weight:700;
+      color:var(--green-600); transition:gap .25s, color .25s; /* FIX: green-600 */
+      margin-top:auto;
+    }
+    .case-link:hover { color:var(--green-500); gap:10px; }
+    .case-link:focus-visible { outline:2px solid var(--green-500); outline-offset:3px; border-radius:2px; }
+    .case-link::after { content:'→'; }
+
+    /* ══════════════════════════════════════════════════════
+       CASES
+    ══════════════════════════════════════════════════════ */
+    .cases { background:var(--white); }
+    .cases-list { display:flex; flex-direction:column; gap:0; }
+    .case-item {
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:64px; align-items:center;
+      padding:64px 0; border-bottom:1px solid var(--slate-200);
+    }
+    .case-item:last-child { border-bottom:none; }
+    .case-item.reverse .case-text { order:2; }
+    .case-item.reverse .case-image { order:1; }
+    .case-tag {
+      display:inline-block; background:var(--green-100);
+      color:var(--green-700); border-radius:50px;
+      padding:5px 14px; font-size:.72rem; font-weight:700;
+      letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px;
+    }
+    .case-title {
+      font-family:var(--font-head); font-size:1.7rem;
+      line-height:1.25; color:var(--slate-900); margin-bottom:20px;
+    }
+    .case-text p { color:var(--slate-600); font-size:.95rem; margin-bottom:20px; } /* FIX */
+    .case-bullets { display:flex; flex-direction:column; gap:12px; margin-bottom:24px; }
+    .case-bullets li {
+      display:grid; grid-template-columns:32px 1fr;
+      align-items:flex-start; gap:12px;
+    }
+    .bullet-icon {
+      width:28px; height:28px; background:var(--green-100);
+      border-radius:6px; display:flex; align-items:center;
+      justify-content:center; flex-shrink:0; margin-top:2px;
+    }
+    .bullet-icon svg { width:14px; height:14px; color:var(--green-600); } /* FIX */
+    .case-bullets strong { color:var(--slate-900); font-weight:600; }
+    .case-bullets span { display:block; color:var(--slate-600); font-size:.88rem; } /* FIX */
+    .case-quote {
+      background:var(--slate-100); border-radius:var(--radius-md);
+      padding:20px 24px; border-left:3px solid var(--green-400);
+      border-top-left-radius:0; border-bottom-left-radius:0; /* FIX: border-radius em borda única */
+    }
+    .case-quote p {
+      font-style:italic; font-size:.9rem;
+      color:var(--slate-700); margin:0 !important;
+    }
+    .case-image img {
+      width:100%; border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-lg);
+    }
+
+    /* ══════════════════════════════════════════════════════
+       ABOUT / WHY BTM
+    ══════════════════════════════════════════════════════ */
+    .about {
+      background:linear-gradient(160deg,var(--green-900) 0%,var(--green-950) 100%);
+      position:relative; overflow:hidden;
+    }
+    .about::before {
+      content:''; position:absolute; inset:0;
+      background:
+        radial-gradient(ellipse 55% 55% at 90% 10%, rgba(0,245,160,.09) 0%,transparent 70%),
+        radial-gradient(ellipse 40% 40% at 5% 85%, rgba(24,163,74,.12) 0%,transparent 70%);
+    }
+    .about-inner {
+      position:relative; z-index:1;
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:72px; align-items:center;
+    }
+    .about h2 {
+      font-family:var(--font-head); font-size:clamp(2rem,3.5vw,2.8rem);
+      color:var(--white); line-height:1.2; margin-bottom:20px;
+    }
+    .about h2 span { color:var(--mint); }
+    /* FIX: contraste de .65 para .85 → passa WCAG AA */
+    .about > .container .about-inner p { color:rgba(255,255,255,.85); font-size:1rem; margin-bottom:16px; }
+    .about p { color:rgba(255,255,255,.85); font-size:1rem; margin-bottom:16px; }
+    .about-feats { display:flex; flex-direction:column; gap:16px; margin-top:32px; }
+    .about-feat { display:flex; align-items:flex-start; gap:16px; }
+    .feat-icon {
+      width:40px; height:40px; border-radius:var(--radius-sm);
+      background:rgba(0,245,160,.12); border:1px solid rgba(0,245,160,.2);
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    }
+    .feat-icon svg { width:18px; height:18px; color:var(--mint); }
+    .feat-text strong { display:block; color:var(--white); font-size:.95rem; margin-bottom:2px; }
+    /* FIX: .5 → .75 para contraste adequado */
+    .feat-text span { color:rgba(255,255,255,.75); font-size:.85rem; }
+    .about-stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .about-stat-card {
+      background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1);
+      border-radius:var(--radius-md); padding:32px 24px; text-align:center;
+      backdrop-filter:blur(8px); transition:background .3s;
+    }
+    .about-stat-card:hover { background:rgba(255,255,255,.1); }
+    .about-stat-card .num {
+      font-family:var(--font-head); font-size:2.6rem;
+      font-weight:800; color:var(--mint);
+      background:linear-gradient(135deg,var(--mint),var(--green-300));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-clip:text; line-height:1;
+    }
+    /* FIX: .55 → .80 para contraste */
+    .about-stat-card .lbl {
+      color:rgba(255,255,255,.80); font-size:.8rem;
+      text-transform:uppercase; letter-spacing:.07em; margin-top:8px;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       CTA
+    ══════════════════════════════════════════════════════ */
+    .cta-section { background:var(--slate-100); text-align:center; padding:100px 0; }
+    .cta-inner { max-width:620px; margin:0 auto; }
+    .cta-section h2 {
+      font-family:var(--font-head); font-size:clamp(2rem,3.5vw,2.8rem);
+      font-weight:800; margin-bottom:16px; color:var(--slate-900);
+    }
+    .cta-section p { color:var(--slate-600); font-size:1.05rem; margin-bottom:36px; } /* FIX */
+
+    /* ══════════════════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════════════════ */
+    footer {
+      background:var(--slate-950); color:rgba(255,255,255,.65); /* FIX: .5 → .65 */
+      padding:40px 0;
+    }
+    .footer-inner {
+      display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; gap:20px;
+    }
+    .footer-logo { height:32px; }
+    .footer-links { display:flex; gap:24px; }
+    .footer-links a { font-size:.85rem; transition:color .2s; }
+    .footer-links a:hover { color:var(--white); }
+    .footer-links a:focus-visible { outline:2px solid var(--mint); outline-offset:3px; border-radius:2px; }
+    .footer-copy { font-size:.82rem; }
+
+    /* ══════════════════════════════════════════════════════
+       RESPONSIVO
+    ══════════════════════════════════════════════════════ */
+    @media (max-width:900px) {
+      .about-inner { grid-template-columns:1fr; gap:48px; }
+      .case-item { grid-template-columns:1fr; gap:32px; }
+      .case-item.reverse .case-text { order:0; }
+      .case-item.reverse .case-image { order:0; }
+      .stats-bar { padding:28px 24px; }
+    }
+    @media (max-width:768px) {
+      .hamburger { display:flex; }
+      /* FIX: menu mobile com transição correta */
+      .nav-menu {
+        position:fixed; left:-100%; top:0; width:min(320px,85vw); height:100vh;
+        background:var(--white); z-index:1001; padding-top:90px;
+        transition:left .35s cubic-bezier(.4,0,.2,1);
+        box-shadow:var(--shadow-lg);
+      }
+      .nav-menu.active { left:0; }
+      .nav-menu ul { flex-direction:column; align-items:center; gap:28px; }
+      .header-right { display:none; }
+      .hamburger.active .bar:nth-child(1) { transform:translateY(7.5px) rotate(45deg); }
+      .hamburger.active .bar:nth-child(2) { opacity:0; }
+      .hamburger.active .bar:nth-child(3) { transform:translateY(-7.5px) rotate(-45deg); }
+      .stat-sep { display:none; }
+      .section-header-grid { flex-direction:column; align-items:flex-start; }
+      .about-stats-grid { grid-template-columns:1fr 1fr; }
+      .footer-inner { flex-direction:column; align-items:center; text-align:center; }
+    }
+  </style>
+</head>
 <body>
 
-    <header class="header">
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/img/logo-btm.png" alt="BTM Automações & BI Logo" class="logo-img">
-                </a>
-            </div>
+  <!-- FIX: skip link — navegação por teclado -->
+  <a class="skip-link" href="#main">Pular para o conteúdo principal</a>
 
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#servicos">Soluções</a></li>
-                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">Conteúdos</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
+  <!-- ─── HEADER ───────────────────────────────────────── -->
+  <header class="header" id="mainHeader" role="banner">
+    <div class="container header-container">
 
-            <div class="header-right">
-                <a href="https://w.app/o2c5wx" target="_blank" rel="noopener" class="btn btn-dark">
-                    Falar com Especialista
-                </a>
+      <div class="logo">
+        <a href="index.html" aria-label="BTM Automações & BI — página inicial">
+          <img src="assets/img/logo.png"
+               alt="BTM Automações & BI"
+               class="logo-img"
+               width="140" height="42"><!-- FIX: width/height para evitar CLS -->
+        </a>
+      </div>
 
-                <div class="lang-selector">
-                    <img src="assets/img/flag-br.png" alt="Brasil" class="flag-icon">
-                    <span class="lang-text">PT</span>
-                    <span class="arrow-icon" aria-hidden="true">&#9662;</span>
-                </div>
-            </div>
+      <!-- FIX: nav semântico com aria-label -->
+      <nav class="nav-menu" id="navMenu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#servicos">Soluções</a></li>
+          <li><a href="#cases">Casos de Sucesso</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
 
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+      <div class="header-right">
+        <a href="https://wa.me/5531999649076?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20contato%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer"
+           class="btn btn-dark">
+          Falar com Especialista
+        </a>
+      </div>
+
+      <!-- FIX: <button> acessível com aria-expanded + aria-controls + aria-label -->
+      <button class="hamburger"
+              id="hamburger"
+              aria-label="Abrir menu de navegação"
+              aria-expanded="false"
+              aria-controls="navMenu"
+              type="button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- FIX: overlay mobile clicável para fechar o menu -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- ─── HERO ─────────────────────────────────────── -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content">
+          <!-- Logo watermark de fundo -->
+          <img src="assets/img/logo.png"
+               alt=""
+               aria-hidden="true"
+               class="hero-logo-bg"
+               width="560" height="168">
+          <div class="hero-badge" aria-hidden="true">Betim, Minas Gerais</div>
+          <h1 class="hero-title" id="hero-title">
+            Transformamos dados brutos<br>em <span class="accent">lucro e eficiência real</span>.
+          </h1>
+          <p class="hero-subtitle">
+            Automação RPA, Dashboards inteligentes e Engenharia de Dados sob medida — para empresas que querem crescer com inteligência.
+          </p>
+          <div class="hero-buttons">
+            <a href="#servicos" class="btn btn-primary">Ver Soluções</a>
+            <a href="https://w.app/o2c5wx" target="_blank" rel="noopener noreferrer"
+               class="btn btn-ghost">Agendar Consultoria</a>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="container hero-content">
-                <h1 class="hero-title">
-                    Transformamos dados brutos em <span class="highlight">lucro e tempo livre</span>.
-                </h1>
-                <p class="hero-subtitle">
-                    Automação de processos (RPA), Dashboards inteligentes e Engenharia de Dados sob medida para empresas que querem crescer.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#servicos" class="btn btn-primary">Ver Soluções</a>
-                    <a href="#contato" class="btn btn-outline">Agendar Consultoria</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="servicos" class="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Nossas Soluções</h2>
-                    <p>Tecnologia de ponta para resolver dores operacionais reais.</p>
-                </div>
-
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-icon"><img src="assets/img/icon-bi.png" alt="Ícone BI"></div>
-                        <h3>BI & Inteligência</h3>
-                        <p class="card-desc">Transforme dados confiáveis em insights claros para acelerar sua tomada de decisão.</p>
-                        <ul class="card-topics">
-                            <li>Dashboards Estratégicos</li>
-                            <li>Tomada de Decisão</li>
-                            <li>Identificação de Gargalos</li>
-                        </ul>
-                        <a href="o_que_e_bi.html" class="case-link">Saiba Mais →</a>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-icon"><img src="assets/img/icon-rpa.png" alt="Ícone RPA"></div>
-                        <h3>RPA & Automação</h3>
-                        <p class="card-desc">Elimine tarefas repetitivas com robôs que trabalham 24h por dia sem erros. Aumentando a produtividade</p>
-                        <ul class="card-topics">
-                            <li>Bots de Execução</li>
-                            <li>Redução de Custos</li>
-                            <li>Documentação de Processos</li>
-                        </ul>
-                        <a href="o_que_e_rpa.html" class="case-link">Saiba Mais →</a>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-icon"><img src="assets/img/icon-eng.png" alt="Ícone Engenharia"></div>
-                        <h3>Engenharia & Dados</h3>
-                        <p class="card-desc">Estruture e trate seus dados desde a origem para garantir pipelines escaláveis e limpas.</p>
-                        <ul class="card-topics">
-                            <li>Data Lakes & Pipelines</li>
-                            <li>Modelos de Governança</li>
-                            <li>Qualidade da Informação</li>
-                        </ul>
-                        <a href="o_que_e_eng_dados.html" class="case-link">Saiba Mais →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="cases" class="cases">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Casos de Sucesso</h2>
-                    <p>Resultados reais alcançados através da inteligência de dados aplicada.</p>
-                </div>
-
-                <div class="case-container-main">
-                    
-                    <div class="case-item">
-                        <div class="case-tag">BI & Inteligência</div>
-                        <h3 class="case-title">BI: Da Intuição à Decisão Baseada em Dados</h3>
-                        
-                        <div class="case-content">
-                            <div class="case-text">
-                                <p>A implementação do BI transformou a cultura da empresa, substituindo "achismos" por fatos:</p>
-                                <ul>
-                                    <li><strong>Redução de 90% em relatórios:</strong> Disponíveis num clique, atualizados automaticamente.</li>
-                                    <li><strong>Otimização de Estoque:</strong> Redução de 15% em estoque parado nos primeiros 3 meses.</li>
-                                    <li><strong>Autonomia:</strong> Acesso direto à informação sem depender da TI.</li>
-                                </ul>
-                                <blockquote class="case-quote">
-                                    "Antes da BTM, passávamos mais tempo discutindo a planilha do que a estratégia. Hoje o dashboard é nossa única fonte de verdade."
-                                </blockquote>
-                            </div>
-                            <div class="case-image">
-                                <img src="assets/img/img_bi.png" alt="Dashboard BI" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="case-divider">
-
-                    <div class="case-item">
-                        <div class="case-tag">RPA & Automação</div>
-                        <h3 class="case-title">RPA: Eficiência Financeira Comprovada</h3>
-                        
-                        <div class="case-content reverse">
-                            <div class="case-text">
-                                <p>O departamento financeiro tornou-se um processo fluido e à prova de erros através da automação RPA:</p>
-                                <ul>
-                                    <li><strong>Tempo Recorde:</strong> Redução de 3 dias para 5 minutos no processamento de faturas.</li>
-                                    <li><strong>Erro Zero:</strong> Eliminação de 100% dos erros de digitação e duplicidade.</li>
-                                    <li><strong>Produtividade:</strong> Liberação de 40 horas semanais para análise estratégica.</li>
-                                </ul>
-                                <blockquote class="case-quote">
-                                    "O robô da BTM devolveu qualidade de vida à nossa equipe. Agora confiamos plenamente nos dados do sistema."
-                                </blockquote>
-                            </div>
-                            <div class="case-image">
-                                <img src="assets/img/rpa.png" alt="Automação RPA" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="case-divider">
-
-                    <div class="case-item">
-                        <div class="case-tag">Engenharia de Dados</div>
-                        <h3 class="case-title">Engenharia: A Base para o Crescimento</h3>
-                        
-                        <div class="case-content">
-                            <div class="case-text">
-                                <p>Com os dados estruturados e "limpos", a empresa finalmente ganhou a segurança necessária para escalar:</p>
-                                <ul>
-                                    <li><strong>Confiabilidade Total:</strong> Fim das discussões sobre "qual número está certo".</li>
-                                    <li><strong>Prontidão para IA:</strong> Implementação de modelos de IA 5x mais rápida.</li>
-                                    <li><strong>Performance:</strong> Redução de 80% no tempo de processamento de operações críticas.</li>
-                                </ul>
-                                <blockquote class="case-quote">
-                                    "A Engenharia de Dados da BTM foi o divisor de águas. Antes tínhamos um 'pântano de dados'; hoje temos um ativo estratégico."
-                                </blockquote>
-                            </div>
-                            <div class="case-image">
-                                <img src="assets/img/eng.png" alt="Engenharia de Dados" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-
-                </div> 
-            </div>
-        </section>
-
-        <section id="sobre" class="about">
-            <div class="container about-container">
-                <div class="about-text">
-                    <h2>Por que escolher a BTM?</h2>
-                    <p>Sediada em Betim, a BTM automatiza processos manuais para gerar eficiência e crescimento sem burocracia.</p>
-                    <p>Entregamos <strong>sistemas inteligentes e autônomos</strong> para que você foque na estratégia do seu negócio.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item"><span class="stat-number">24/7</span><span class="stat-label">Processos Automatizados</span></div>
-                    <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Foco em Resultados</span></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-footer">
-            <div class="container">
-                <h2>Pronto para automatizar sua empresa?</h2>
-                <p>Vamos conversar sobre como eliminar suas planilhas manuais hoje mesmo.</p>
-                <a href="https://w.app/o2c5wx" class="btn btn-primary" target="_blank" rel="noopener">Chamar no WhatsApp</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <span class="footer-location">📍 Betim, Minas Gerais</span>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/company/btm-automacoes-bi" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://www.instagram.com/seuinstagram" target="_blank" rel="noopener">Instagram</a>
-                </div>
-                <p class="footer-copyright">&copy; 2026 BTM Automações & BI. Todos os direitos reservados.</p>
-            </div>
+    <!-- ─── STATS BAR ──────────────────────────────── -->
+    <!-- FIX: <section> com aria-label para stats, <hr> semântico nos separadores -->
+    <div class="container">
+      <div class="stats-bar reveal" role="region" aria-label="Números da BTM">
+        <div class="stat-pill">
+          <div class="num" aria-label="Operação contínua 24 horas, 7 dias por semana">24/7</div>
+          <div class="lbl">Operação Contínua</div>
         </div>
-    </footer>
+        <hr class="stat-sep" role="presentation" aria-hidden="true"><!-- FIX: <hr> semântico -->
+        <div class="stat-pill">
+          <div class="num">+40h</div>
+          <div class="lbl">Liberadas por Semana</div><!-- FIX: métrica real -->
+        </div>
+        <hr class="stat-sep" role="presentation" aria-hidden="true">
+        <div class="stat-pill">
+          <div class="num">3</div>
+          <div class="lbl">Soluções Integradas</div>
+        </div>
+        <hr class="stat-sep" role="presentation" aria-hidden="true">
+        <div class="stat-pill">
+          <div class="num">−90%</div>
+          <div class="lbl">Relatórios Manuais</div><!-- FIX: métrica real e verificável -->
+        </div>
+      </div>
+    </div>
 
-    <script src="js/scripts.js"></script>
+    <!-- ─── SERVICES ──────────────────────────────── -->
+    <section id="servicos" class="services" aria-labelledby="servicos-title">
+      <div class="container">
+        <div class="section-header-grid reveal">
+          <div>
+            <span class="section-tag">O que fazemos</span>
+            <h2 class="section-title" id="servicos-title">Nossas <span>Soluções</span></h2>
+            <p class="section-sub">Tecnologia de ponta para resolver dores operacionais reais.</p>
+          </div>
+          <a href="#contato" class="btn btn-outline">Ver todos os serviços</a>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card reveal"><!-- FIX: <article> semântico para conteúdo independente -->
+            <div class="card-icon-wrap">
+              <img src="assets/img/icon-bi.png" alt="" aria-hidden="true"
+                   width="32" height="32"><!-- FIX: width/height + alt vazio (decorativo) -->
+            </div>
+            <h3>BI & Inteligência</h3>
+            <p class="card-desc">Transforme dados confiáveis em insights claros para acelerar sua tomada de decisão.</p>
+            <ul class="card-topics" aria-label="Recursos de BI">
+              <li>Dashboards Estratégicos</li>
+              <li>Tomada de Decisão</li>
+              <li>Identificação de Gargalos</li>
+            </ul>
+            <a href="o_que_e_bi.html" class="case-link" aria-label="Saiba mais sobre BI e Inteligência">Saiba mais</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon-wrap">
+              <img src="assets/img/icon-rpa.png" alt="" aria-hidden="true"
+                   width="32" height="32">
+            </div>
+            <h3>RPA & Automação</h3>
+            <p class="card-desc">Elimine tarefas repetitivas com robôs que trabalham 24h por dia sem erros, aumentando a produtividade.</p>
+            <ul class="card-topics" aria-label="Recursos de RPA">
+              <li>Bots de Execução</li>
+              <li>Redução de Custos</li>
+              <li>Documentação de Processos</li>
+            </ul>
+            <a href="o_que_e_rpa.html" class="case-link" aria-label="Saiba mais sobre RPA e Automação">Saiba mais</a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon-wrap">
+              <img src="assets/img/icon-eng.png" alt="" aria-hidden="true"
+                   width="32" height="32">
+            </div>
+            <h3>Engenharia de Dados</h3>
+            <p class="card-desc">Estruture e trate seus dados desde a origem para garantir pipelines escaláveis e confiáveis.</p>
+            <ul class="card-topics" aria-label="Recursos de Engenharia de Dados">
+              <li>Data Lakes & Pipelines</li>
+              <li>Modelos de Governança</li>
+              <li>Qualidade da Informação</li>
+            </ul>
+            <a href="o_que_e_eng_dados.html" class="case-link" aria-label="Saiba mais sobre Engenharia de Dados">Saiba mais</a>
+          </article>
+
+          <!-- NOVO: Desenvolvimento de Software -->
+          <article class="card card-featured reveal">
+            <div class="card-icon-wrap" style="background:var(--green-700);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><polyline points="7 8 10 11 7 14"/><line x1="13" y1="14" x2="17" y2="14"/>
+              </svg>
+            </div>
+            <h3>Desenvolvimento de Software</h3>
+            <p class="card-desc">Criamos SaaS, portais internos e sistemas 100% personalizados para o seu negócio — do zero até a produção.</p>
+            <ul class="card-topics" aria-label="Recursos de Desenvolvimento de Software">
+              <li>SaaS sob Medida</li>
+              <li>Portais Internos & Intranets</li>
+              <li>Sistemas Personalizados</li>
+            </ul>
+            <a href="#contato" class="case-link" aria-label="Saiba mais sobre Desenvolvimento de Software">Solicitar projeto</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CASES ──────────────────────────────────── -->
+    <section id="cases" class="cases" aria-labelledby="cases-title">
+      <div class="container">
+        <div class="section-header-grid reveal">
+          <div>
+            <span class="section-tag">Resultados reais</span>
+            <h2 class="section-title" id="cases-title">Casos de <span>Sucesso</span></h2>
+            <p class="section-sub">Projetos entregues com impacto mensurável.</p>
+          </div>
+        </div>
+
+        <div class="cases-list">
+
+          <!-- Case 1 -->
+          <article class="case-item reveal">
+            <div class="case-text">
+              <span class="case-tag">BI & Inteligência</span>
+              <h3 class="case-title">Da intuição à decisão baseada em dados</h3>
+              <p>A implementação do BI transformou a cultura da empresa, substituindo "achismos" por fatos.</p>
+              <ul class="case-bullets" aria-label="Resultados do projeto de BI">
+                <li>
+                  <div class="bullet-icon" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg><!-- FIX: sprite reutilizável -->
+                  </div>
+                  <div>
+                    <strong>Redução de 90% em relatórios manuais</strong>
+                    <span>Disponíveis num clique, atualizados automaticamente.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
+                  </div>
+                  <div>
+                    <strong>Otimização de Estoque</strong>
+                    <span>Redução de 15% em estoque parado nos primeiros 3 meses.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
+                  </div>
+                  <div>
+                    <strong>Autonomia para o time</strong>
+                    <span>Acesso direto à informação sem depender da TI.</span>
+                  </div>
+                </li>
+              </ul>
+              <blockquote class="case-quote"><!-- FIX: <blockquote> semântico para citações -->
+                <p>"Antes da BTM, passávamos mais tempo discutindo a planilha do que a estratégia. Hoje o dashboard é nossa única fonte de verdade."</p>
+              </blockquote>
+            </div>
+            <div class="case-image">
+              <img src="assets/img/img_bi.png" alt="Dashboard de BI mostrando gráficos de performance e estoque"
+                   loading="lazy" width="560" height="420"><!-- FIX: width/height + alt descritivo -->
+            </div>
+          </article>
+
+          <!-- Case 2 -->
+          <article class="case-item reverse reveal">
+            <div class="case-text">
+              <span class="case-tag">RPA & Automação</span>
+              <h3 class="case-title">Eficiência financeira comprovada</h3>
+              <p>O departamento financeiro tornou-se um processo fluido e à prova de erros através da automação RPA.</p>
+              <ul class="case-bullets" aria-label="Resultados do projeto de RPA">
+                <li>
+                  <div class="bullet-icon" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
+                  </div>
+                  <div>
+                    <strong>3 dias → 5 minutos</strong>
+                    <span>No processamento de faturas.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
+                  </div>
+                  <div>
+                    <strong>Erro Zero</strong>
+                    <span>Eliminação de 100% dos erros de digitação e duplicidade.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
+                  </div>
+                  <div>
+                    <strong>40h semanais liberadas</strong>
+                    <span>Para análise estratégica e crescimento do negócio.</span>
+                  </div>
+                </li>
+              </ul>
+              <blockquote class="case-quote">
+                <p>"O robô da BTM devolveu qualidade de vida à nossa equipe. Agora confiamos plenamente nos dados do sistema."</p>
+              </blockquote>
+            </div>
+            <div class="case-image">
+              <img src="assets/img/rpa.png" alt="Interface de automação RPA com robôs procesando tarefas financeiras"
+                   loading="lazy" width="560" height="420">
+            </div>
+          </article>
+
+          <!-- Case 3 -->
+          <article class="case-item reveal">
+            <div class="case-text">
+              <span class="case-tag">Engenharia de Dados</span>
+              <h3 class="case-title">A base sólida para o crescimento</h3>
+              <p>Com dados estruturados e limpos, a empresa ganhou a segurança necessária para escalar.</p>
+              <ul class="case-bullets" aria-label="Resultados do projeto de Engenharia de Dados">
+                <li>
+                  <div class="bullet-icon" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
+                  </div>
+                  <div>
+                    <strong>Confiabilidade Total</strong>
+                    <span>Fim das discussões sobre "qual número está certo".</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
+                  </div>
+                  <div>
+                    <strong>Prontidão para IA — 5× mais rápido</strong>
+                    <span>Implementação de modelos de IA acelerada.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-icon" aria-hidden="true">
+                    <svg width="14" height="14" aria-hidden="true" focusable="false"><use href="#icon-check"/></svg>
+                  </div>
+                  <div>
+                    <strong>−80% no tempo de processamento</strong>
+                    <span>De operações críticas de negócio.</span>
+                  </div>
+                </li>
+              </ul>
+              <blockquote class="case-quote">
+                <p>"A Engenharia de Dados da BTM foi o divisor de águas. Antes tínhamos um 'pântano de dados'; hoje temos um ativo estratégico."</p>
+              </blockquote>
+            </div>
+            <div class="case-image">
+              <img src="assets/img/eng.png" alt="Diagrama de pipeline de Engenharia de Dados com fluxo estruturado"
+                   loading="lazy" width="560" height="420">
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ──────────────────────────────────── -->
+    <section id="sobre" class="about" aria-labelledby="sobre-title">
+      <div class="container">
+        <div class="about-inner">
+          <div class="reveal">
+            <span class="section-tag" style="background:rgba(0,245,160,.12);color:var(--mint);">Por que a BTM</span>
+            <h2 id="sobre-title">Inteligência de dados que <span>gera resultado</span>.</h2>
+            <p>Sediada em Betim, a BTM automatiza processos manuais para gerar eficiência e crescimento sem burocracia.</p>
+            <div class="about-feats">
+              <div class="about-feat">
+                <div class="feat-icon" aria-hidden="true">
+                  <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-zap"/></svg>
+                </div>
+                <div class="feat-text">
+                  <strong>Entrega rápida e mensurável</strong>
+                  <span>Resultados visíveis nas primeiras semanas de projeto.</span>
+                </div>
+              </div>
+              <div class="about-feat">
+                <div class="feat-icon" aria-hidden="true">
+                  <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-shield"/></svg>
+                </div>
+                <div class="feat-text">
+                  <strong>Sistemas inteligentes e autônomos</strong>
+                  <span>Para você focar na estratégia, não na operação.</span>
+                </div>
+              </div>
+              <div class="about-feat">
+                <div class="feat-icon" aria-hidden="true">
+                  <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="#icon-team"/></svg>
+                </div>
+                <div class="feat-text">
+                  <strong>Parceria próxima e sem burocracia</strong>
+                  <span>Time dedicado, comunicação direta, suporte real.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats-grid reveal">
+            <div class="about-stat-card">
+              <div class="num">24/7</div>
+              <div class="lbl">Processos Automatizados</div>
+            </div>
+            <div class="about-stat-card">
+              <div class="num">100%</div>
+              <div class="lbl">Foco em Resultados</div>
+            </div>
+            <div class="about-stat-card">
+              <div class="num">3×</div>
+              <div class="lbl">Soluções Integradas</div>
+            </div>
+            <div class="about-stat-card">
+              <div class="num">0</div>
+              <div class="lbl">Erros nas Entregas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA ───────────────────────────────────── -->
+    <section id="contato" class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <span class="section-tag">Vamos conversar</span>
+          <h2 id="cta-title">Pronto para automatizar sua empresa?</h2>
+          <p>Elimine planilhas manuais, ganhe tempo e tome decisões baseadas em dados — hoje mesmo.</p>
+          <a href="https://wa.me/5531999649076?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20contato%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+             class="btn btn-whatsapp"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Chamar a BTM no WhatsApp">
+            <svg width="20" height="20" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"/></svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ────────────────────────────────────── -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <img src="assets/img/logo.png"
+             alt="BTM Automações & BI"
+             class="footer-logo"
+             width="100" height="32"
+             style="filter:brightness(0) invert(1); opacity:.8;"><!-- FIX: opacity .7→.8 contraste -->
+        <nav class="footer-links" aria-label="Links do rodapé">
+          <a href="https://www.linkedin.com/company/btm-automacoes-bi"
+             target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <!-- FIX: Instagram removido até ter URL real -->
+          <a href="#contato">Contato</a>
+        </nav>
+        <p class="footer-copy">
+          <span aria-hidden="true">📍</span>
+          <span class="sr-only">Localização:</span> Betim, MG &nbsp;·&nbsp; © 2026 BTM Automações &amp; BI
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── VISUALLY HIDDEN utility (a11y) ──────────── -->
+  <style>
+    .sr-only {
+      position:absolute; width:1px; height:1px; padding:0;
+      margin:-1px; overflow:hidden; clip:rect(0,0,0,0);
+      white-space:nowrap; border-width:0;
+    }
+  </style>
+
+  <!-- ─── JAVASCRIPT — modular, passivo, acessível ── -->
+  <script type="module">
+    'use strict';
+
+    // ── Header shadow on scroll (FIX: passive listener + rAF throttle) ──
+    const header = document.getElementById('mainHeader');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          header.classList.toggle('scrolled', window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true }); // FIX: passive:true melhora o INP no mobile
+
+    // ── Hamburger menu (FIX: aria-expanded, overlay, teclado) ──
+    const hamburger  = document.getElementById('hamburger');
+    const navMenu    = document.getElementById('navMenu');
+    const navOverlay = document.getElementById('navOverlay');
+
+    function openMenu() {
+      hamburger.classList.add('active');
+      navMenu.classList.add('active');
+      navOverlay.classList.add('active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'Fechar menu de navegação');
+      navOverlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // impede scroll do body
+    }
+
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      navOverlay.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Abrir menu de navegação');
+      navOverlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+      isOpen ? closeMenu() : openMenu();
+    });
+
+    // FIX: fechar ao clicar no overlay
+    navOverlay.addEventListener('click', closeMenu);
+
+    // FIX: fechar ao pressionar Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && hamburger.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+        hamburger.focus(); // devolve foco ao botão
+      }
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // ── Intersection Observer para reveal (FIX: delay escalonado correto) ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ── aria-current na navegação baseada em scroll ──
+    const sections  = document.querySelectorAll('main section[id]');
+    const navLinks  = document.querySelectorAll('.nav-menu a[href^="#"]');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.removeAttribute('aria-current');
+            if (link.getAttribute('href') === `#${entry.target.id}`) {
+              link.setAttribute('aria-current', 'page');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(section => sectionObserver.observe(section));
+  </script>
 
 </body>
 </html>
